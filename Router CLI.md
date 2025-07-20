@@ -28,6 +28,12 @@ R0(config-if)#no shutdown
 ### Save command of router
 R0#copy running-config startup-config
 
+### IP Route
+R0(config)#ip route {net address which is not neighbour, in which network it wants to go, that net address ends with .0} {that network mask address} {gateway}
+
+### Show Ip Route
+R0#show ip route
+
 
 
 
