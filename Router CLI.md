@@ -1,44 +1,106 @@
-### Admin
-Router>enable or en
+## 🗂️ Keywords  
+Admin  
+Config  
+Change name  
+Unnecessary command  
+Set pass  
+Del pass  
+Go to Interface  
+Set IP  
+Up link  
+Save command of router  
+IP Route  
+Show Ip Route
 
-### Config
+---
+
+## 🖧 Cisco Router CLI Commands – Quick Reference
+
+### ✅ Admin
+```
+Router>enable
+```
+Or shorthand:
+```
+en
+```
+
+---
+
+### ✅ Config
+```
 Router#config t
+```
 
-### Change name
+---
+
+### ✅ Change name
+```
 Router(config)#hostname R0
+```
 
-### Unnecessary command
+---
+
+### ✅ Unnecessary command
+```
 R0(config)#no ip domain-lookup
+```
 
-### Set pass
+---
+
+### ✅ Set pass
+```
 R0(config)#enable secret password
+```
 
-### Del pass
+---
+
+### ✅ Delete pass
+```
 R0(config)#no enable secret
+```
 
-### Go to Interface
+---
+
+### ✅ Go to Interface
+```
 R0(config)#interface fa0/0
+```
 
-### Set IP
+---
+
+### ✅ Set IP
+```
 R0(config-if)#ip address 192.168.10.1 255.255.255.0
+```
 
-### Up link
+---
+
+### ✅ Up link (enable interface)
+```
 R0(config-if)#no shutdown
+```
 
-### Save command of router
+---
+
+### ✅ Save running config to startup config
+```
 R0#copy running-config startup-config
+```
 
-### IP Route
-R0(config)#ip route {net address which is not neighbour, in which network it wants to go, that net address ends with .0} {that network mask address} {gateway}
+---
 
-### Show Ip Route
+### ✅ IP Route
+```
+R0(config)#ip route {destination network} {subnet mask} {gateway}
+```
+- `{destination network}`: network not directly connected (ends with `.0`)  
+- `{subnet mask}`: network mask of destination  
+- `{gateway}`: next-hop IP address or exit interface
+
+---
+
+### ✅ Show IP Route
+```
 R0#show ip route
-
-
-
-
-
-
-
-
-
+```
