@@ -104,3 +104,9 @@ R0(config)#ip route {destination network} {subnet mask} {gateway}
 ```
 R0#show ip route
 ```
+
+## Dynamic Routing Rip
+router rip
+ version 2
+ no auto-summary
+ network 192.168.108.0
